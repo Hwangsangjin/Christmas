@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas!</title>
+    <meta property="og:image" content="https://www.shuttledelivery.co.kr/blog/wp-content/uploads/2019/12/christmas-activities-blob-800x400.jpg">
+    <meta property="og:title" content="Merry Christmas!">
+    <meta property="og:description" content="Merry Christmas!">
+    <link rel="shortcut icon" href="https://cdn2.iconfinder.com/data/icons/christmas-46/64/christmas-icon-tree-512.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+    <style>
+        * {
+            font-family: 'Poor Story', cursive;
+        }
+
+        body {
+            background-color: #9b070f;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        .envelope {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://pngimg.com/uploads/envelope/envelope_PNG18366.png');
+            background-size: cover;
+            background-position: center;
+            margin: 100px auto 0 auto;
+            cursor: pointer;
+        }
+
+        .envelope-msg {
+            color: white;
+            text-align: center;
+        }
+
+        .letter-close {
+            display: block;
+        }
+        .letter-open {
+            display: none;
+        }
+
+        .kong {
+            color: white;
+            width: 200px;
+            height: 200px;
+            background-image: url('kong.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 100px auto 0 auto;
+            border-radius: 100px;
+            border: 5px solid white;
+            box-shadow: 0 0 10px 0 white;
+        }
+
+        .msgbox {
+            background-color: ivory;
+            width: 300px;
+            margin: auto;
+            color: brown;
+            padding: 30px;
+            font-size: 20px;
+            line-height: 30px;
+            box-shadow: 0 0 10px 0 white;
+        }
+
+        .from {
+            text-align: right;
+            margin-bottom: 0;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        @media screen and (max-width: 760px) {
+            .msgbox {
+                width: 300px;
+                padding: 20px;
+            }
+            .kong {
+                width: 200px;
+                height: 200px;
+                margin: 100px auto 0 auto;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .envelope {
+                margin: 100px auto 0 auto;
+            }
+        }
+    </style>
+
+    <script>
+        function open_letter() {
+            document.getElementsByClassName("letter-close")[0].style.display = 'none'
+            document.getElementsByClassName("letter-open")[0].style.display = 'block'
+        }
+    </script>
+</head>
+
+<body>
+    <div class="letter-close">
+        <div class="envelope" onclick="open_letter()"></div>
+        <h2 class="envelope-msg">편지를 누르세요!</h2>
+    </div>
+
+    <div class="letter-open">
+        <div class="kong"></div>
+        <h1>Merry Christmas!</h1>
+        <div class="msgbox">
+            사랑하는 사람들과 <br />
+            따뜻하고 행복한 <br />
+            크리스마스 보내세요! <br />
+            <p class="from">-  2020.12.24 땅콩 -</p>
+        </div>
+    </div>
+</body>
+
+</html>
